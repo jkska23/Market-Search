@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="edu.rpi.cs.csci4963.u24.kims35.hw05.farmersmarket.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Configuration" onAction="#onShowConfig"/>
+                <MenuItem text="Close" onAction="#onClose"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Farmers Market Search" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <Label text="Search by city, state, or ZIP code:"/>
+            <TextField fx:id="searchField" promptText="Enter city, state, or ZIP code"/>
+            <Button text="Search" onAction="#onSearch" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+            <Label text="Search Results:"/>
+            <ListView fx:id="marketListView"/>
+        </VBox>
+    </center>
+</BorderPane>
+

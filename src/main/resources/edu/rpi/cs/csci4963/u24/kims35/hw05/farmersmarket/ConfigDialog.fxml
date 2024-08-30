@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.rpi.cs.csci4963.u24.kims35.hw05.farmersmarket.ConfigDialog" prefWidth="400">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Configuration" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="Database URL:"/>
+    <TextField fx:id="urlField" promptText="Enter database URL"/>
+    <Label text="Database User:"/>
+    <TextField fx:id="userField" promptText="Enter database user"/>
+    <Label text="Database Password:"/>
+    <TextField fx:id="passwordField" promptText="Enter database password"/>
+    <Label text="Preferred Distance:"/>
+    <TextField fx:id="distanceField" promptText="Enter distance"/>
+    <Button text="Save" onAction="#onSave" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    <Button text="Cancel" onAction="#onCancel" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+</VBox>
